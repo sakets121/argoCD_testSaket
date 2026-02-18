@@ -13,7 +13,7 @@ image:
 
 imagePullSecrets: []
 nameOverride: ""
-fullnameOverride: "saket-nginx-deploy-argoCD"
+fullnameOverride: "saket-nginx-deploy-argocd"
 
 podAnnotations: {}
 podLabels:
