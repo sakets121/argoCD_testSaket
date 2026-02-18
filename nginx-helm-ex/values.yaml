@@ -1,0 +1,37 @@
+# Default values for nginx.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+namespace: saket
+replicaCount: 1
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "1.24-alpine"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: "saket-nginx-deploy-argoCD"
+
+podAnnotations: {}
+podLabels:
+  app: nginx
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+service:
+  type: NodePort
+  port: 80
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
+
+
